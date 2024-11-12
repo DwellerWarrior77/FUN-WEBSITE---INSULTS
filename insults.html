@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arav Gamezz Productions - Insults</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #ff4b1f, #ff9068);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            font-weight: lighter;
+        }
+
+        #insult {
+            font-size: 24px;
+            margin: 20px;
+            font-weight: bold;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        button {
+            background-color: #ff5733;
+            color: white;
+            padding: 18px 40px;
+            font-size: 20px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e74c3c;
+            transform: scale(1.1);
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            button {
+                padding: 14px 30px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Arav Gamezz Productions - Insults</h1>
+    <p>Click the button to receive a random insult!</p>
+    <div id="insult">Click the button to get an insult!</div>
+    <button onclick="generateInsult()">Click me!</button>
+
+    <script>
+        const insults = [
+            "You're like a cloud. When you disappear, it's a beautiful day.",
+            "I’d agree with you, but then we’d both be wrong.",
+            "You're proof that even a broken clock is right twice a day.",
+            "If you were any more stupid, you’d need a leash.",
+            "You're like a software update. Whenever I see you, I think, 'Not now.'",
+            "You're the human equivalent of a participation trophy.",
+            "I’m not saying I hate you, but I would unplug your life support to charge my phone.",
+            "If you were any dumber, I’d have to water you.",
+            "I don’t know what’s tighter, your jeans or your brain.",
+            "You're like a phone with no signal — useless.",
+            "You're the reason we have warning labels on products.",
+            "You bring everyone so much joy when you leave the room.",
+            "Your secrets are always safe with me. I never even listen when you tell me them.",
+            "I'd explain it to you, but I left my English-to-Dingbat dictionary at home.",
+            "You're like a slinky — not really good for anything, but you bring a smile when pushed down the stairs.",
+            "If there were a contest for being annoying, you'd come second. You'd never win.",
+            "You're as useless as a screen door on a submarine.",
+            "I'd agree with you, but then we’d both be wrong.",
+            "You’re not stupid; you just have bad luck thinking.",
+            "You bring everyone so much happiness when you leave the room.",
+            "You're the reason we can't have nice things.",
+            "You’re like a broken pencil—pointless.",
+            "You're as sharp as a marble.",
+            "You’re like a cloud in the sky. Once you go away, the day gets brighter.",
+            "You have the perfect face for radio.",
+            "You couldn't pour water out of a boot if the instructions were on the heel.",
+            "You’re the human equivalent of a participation trophy.",
+            "Your secrets are always safe with me. I never even listen when you tell me them.",
+            "You’re not the sharpest tool in the shed, are you?",
+            "You're like a phone with no signal — totally useless.",
+            "Your brain is like a web browser: lots of tabs open, but nothing important is happening.",
+            "You're proof that evolution can go in reverse.",
+            "Your mind is on vacation, but your mouth is working overtime.",
+            "You're like a software update that keeps saying, 'Restarting in 3, 2, 1...' and never actually does."
+        ];
+
+        function generateInsult() {
+            const randomIndex = Math.floor(Math.random() * insults.length);
+            document.getElementById('insult').textContent = insults[randomIndex];
+        }
+    </script>
+</body>
+</html>
